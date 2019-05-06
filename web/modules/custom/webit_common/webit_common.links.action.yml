@@ -1,0 +1,14 @@
+webit_common.add_page:
+  route_name: node.add
+  route_parameters:
+    node_type: 'page'
+  title: 'Add content'
+  appears_on:
+    - view.contenuti_webit.page_admin_page
+webit_common.add_news:
+  route_name: node.add
+  route_parameters:
+    node_type: 'news'
+  title: 'Add content'
+  appears_on:
+    - view.contenuti_webit.page_admin_news

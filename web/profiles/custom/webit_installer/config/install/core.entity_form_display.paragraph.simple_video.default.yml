@@ -1,0 +1,32 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.simple_video.field_label
+    - field.field.paragraph.simple_video.field_video_url
+    - paragraphs.paragraphs_type.simple_video
+  module:
+    - video_embed_field
+id: paragraph.simple_video.default
+targetEntityType: paragraph
+bundle: simple_video
+mode: default
+content:
+  field_label:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_video_url:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: video_embed_field_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

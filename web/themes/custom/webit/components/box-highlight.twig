@@ -1,0 +1,16 @@
+<div class="focus-text {{ textColor }} {% if hover %}focus-text--teaser{% endif %}" {% if link %}data-allclick{% endif %}>
+    <header class="focus-text__header">
+        {% if icon %}
+        {{ source(base_path ~ directory ~ '/images/svg/' ~ icon ~ '.svg') }}
+        {% endif %}
+        <h3 class="focus-text__title">{{ title }}</h3>
+    </header>
+    <div class="tinytext">
+        {{ text }}
+    </div>
+    {% if link %}
+        <footer class="focus-text__footer">
+            <a href="{{ link[0]['#url'] }}" class="more-link">{{ link[0]['#title'] }}</a>
+        </footer>
+    {% endif %}
+</div>

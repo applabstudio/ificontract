@@ -1,0 +1,8 @@
+langcode: it
+status: true
+dependencies: {  }
+id: taxonomy_vocabulary_image_categories
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

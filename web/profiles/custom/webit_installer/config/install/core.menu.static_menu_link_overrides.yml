@@ -1,0 +1,26 @@
+definitions:
+  contact__site_page:
+    enabled: true
+    menu_name: footer
+    parent: ''
+    weight: 0
+    expanded: false
+  admin_toolbar_tools__drupalorg:
+    menu_name: admin
+    parent: admin_toolbar_tools.help
+    weight: -5
+    expanded: false
+    enabled: false
+  admin_development:
+    menu_name: admin
+    parent: admin_toolbar_tools.help
+    weight: -8
+    expanded: false
+    enabled: false
+  help__main:
+    menu_name: admin
+    parent: system.admin
+    weight: 9
+    expanded: false
+    enabled: false
+langcode: it

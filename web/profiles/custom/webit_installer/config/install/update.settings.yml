@@ -1,0 +1,12 @@
+check:
+  disabled_extensions: false
+  interval_days: 7
+fetch:
+  url: ''
+  max_attempts: 2
+  timeout: 30
+notification:
+  emails:
+    - produzione@webit.it
+  threshold: security
+langcode: it

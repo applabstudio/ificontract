@@ -1,0 +1,23 @@
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+id: titolo
+label: Titolo
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  8d17f32d-d56b-4e90-ab04-c490d4bbd22b:
+    id: node_type
+    bundles:
+      article: article
+      news: news
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 8d17f32d-d56b-4e90-ab04-c490d4bbd22b
+selection_logic: and
+weight: -5
+relationships: {  }

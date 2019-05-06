@@ -1,0 +1,32 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.videogallery.field_col1_content
+    - field.field.paragraph.videogallery.field_label
+    - paragraphs.paragraphs_type.videogallery
+  module:
+    - entity_reference_revisions
+id: paragraph.videogallery.default
+targetEntityType: paragraph
+bundle: videogallery
+mode: default
+content:
+  field_col1_content:
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_label:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

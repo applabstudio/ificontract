@@ -1,0 +1,10 @@
+{% if type == 'file' or url[0]['#plain_text'] starts with 'http' %}
+  {% set target = '_blank' %}
+{% else %}
+  {% set target = '_self' %}
+{% endif %}
+<div class="simple-button simple-button--{{ h_align }}">
+  <a href="{{ url }}" class="button button--{{ color }}" target="{{ target }}">
+    <span>{{ label }}</span>
+  </a>
+</div>

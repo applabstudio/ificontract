@@ -1,0 +1,20 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cols_num
+    - paragraphs.paragraphs_type.grid_row
+  module:
+    - options
+id: paragraph.grid_row.field_cols_num
+field_name: field_cols_num
+entity_type: paragraph
+bundle: grid_row
+label: 'Numero colonne'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

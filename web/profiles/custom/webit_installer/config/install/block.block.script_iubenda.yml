@@ -1,0 +1,24 @@
+langcode: it
+status: true
+dependencies:
+  content:
+    - 'block_content:script_iubenda:b7156f31-39e7-4784-8e92-b851a659d683'
+  module:
+    - block_content
+  theme:
+    - webit
+id: script_iubenda
+theme: webit
+region: hidden
+weight: -2
+provider: null
+plugin: 'block_content:b7156f31-39e7-4784-8e92-b851a659d683'
+settings:
+  id: 'block_content:b7156f31-39e7-4784-8e92-b851a659d683'
+  label: 'Script Iubenda'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

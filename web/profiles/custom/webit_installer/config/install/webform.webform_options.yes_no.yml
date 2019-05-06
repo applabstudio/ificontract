@@ -1,0 +1,11 @@
+langcode: it
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: yes_no
+label: Sì/No
+category: Generale
+likert: false
+options: "Yes: Yes\nNo: No\n"

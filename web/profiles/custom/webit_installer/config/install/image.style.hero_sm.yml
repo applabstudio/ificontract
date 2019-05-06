@@ -1,0 +1,16 @@
+langcode: it
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_sm
+label: 'Hero SM'
+effects:
+  fc795dac-4867-418a-baa2-e798cb57109d:
+    uuid: fc795dac-4867-418a-baa2-e798cb57109d
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 400
+      crop_type: focal_point

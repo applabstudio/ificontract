@@ -1,0 +1,8 @@
+langcode: it
+status: true
+dependencies: {  }
+id: accordion_item
+label: 'Elemento accordion'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

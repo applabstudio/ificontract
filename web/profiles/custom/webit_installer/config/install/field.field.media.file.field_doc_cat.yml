@@ -1,0 +1,28 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_doc_cat
+    - media.type.file
+    - taxonomy.vocabulary.doc_categories
+id: media.file.field_doc_cat
+field_name: field_doc_cat
+entity_type: media
+bundle: file
+label: Categoria
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      doc_categories: doc_categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

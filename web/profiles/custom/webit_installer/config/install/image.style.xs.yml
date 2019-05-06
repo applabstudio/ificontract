@@ -1,0 +1,14 @@
+langcode: it
+status: true
+dependencies: {  }
+name: xs
+label: XS
+effects:
+  d6bd1727-bba0-491e-a08f-cc398c16f25c:
+    uuid: d6bd1727-bba0-491e-a08f-cc398c16f25c
+    id: image_scale
+    weight: 1
+    data:
+      width: 400
+      height: null
+      upscale: false

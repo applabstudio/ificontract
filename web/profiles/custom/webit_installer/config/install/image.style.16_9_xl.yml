@@ -1,0 +1,16 @@
+langcode: it
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 16_9_xl
+label: '16:9 XL'
+effects:
+  93a885b9-a588-46d6-b71a-2858a71b5f6d:
+    uuid: 93a885b9-a588-46d6-b71a-2858a71b5f6d
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 2048
+      height: 1152
+      crop_type: focal_point

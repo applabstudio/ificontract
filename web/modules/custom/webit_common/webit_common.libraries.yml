@@ -1,0 +1,5 @@
+webit_common.general:
+  version: 1.x
+  css:
+    component:
+      css/webit_common_general.css: {}

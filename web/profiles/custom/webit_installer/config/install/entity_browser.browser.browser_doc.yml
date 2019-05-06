@@ -1,0 +1,59 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - media.type.file
+    - views.view.browser
+  module:
+    - dropzonejs_eb_widget
+    - media
+    - views
+name: browser_doc
+label: 'Browser doc'
+display: modal
+display_configuration:
+  width: '750'
+  height: '550'
+  link_text: 'Seleziona documenti'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration:
+  entity_type: file
+  display: rendered_entity
+  display_settings:
+    view_mode: default
+  select_text: 'Use selected'
+  selection_hidden: false
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  6bcab9ff-1646-456f-9489-494ff5bb3f13:
+    settings:
+      view: browser
+      view_display: document_browser
+      submit_text: 'Seleziona documenti'
+      auto_select: false
+    uuid: 6bcab9ff-1646-456f-9489-494ff5bb3f13
+    weight: 1
+    label: Libreria
+    id: view
+  ac5ddc1d-f1b8-40bb-9798-f263d367d7a2:
+    settings:
+      form_mode: default
+      media_type: file
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Trascina i file qui'
+      max_filesize: 5M
+      extensions: 'txt rtf doc docx ppt pptx xls xlsx pdf odf odg odp ods odt fodt fods fodp fodg key numbers pages'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: Inserisci
+      media_entity_bundle: ''
+    uuid: ac5ddc1d-f1b8-40bb-9798-f263d367d7a2
+    weight: 2
+    label: Carica
+    id: dropzonejs_media_entity_inline_entity_form

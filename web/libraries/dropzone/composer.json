@@ -1,0 +1,19 @@
+{
+  "name": "vardot/dropzone",
+	"description": "forked from enyo/dropzone to be used as drupal-library",
+  "type": "drupal-library",
+	"homepage": "http://www.dropzonejs.com",
+	"keywords": [
+		"dragndrop",
+		"drag and drop",
+		"file upload",
+		"upload"
+	],
+	"authors": [{
+		"name": "Matias Meno",
+		"email": "m@tias.me",
+		"homepage": "http://www.matiasmeno.com"
+	}],
+	"license": "MIT",
+	"minimum-stability": "dev"
+}

@@ -1,0 +1,60 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_col1_content
+    - paragraphs.paragraphs_type.simple_video
+    - paragraphs.paragraphs_type.videogallery
+  module:
+    - entity_reference_revisions
+id: paragraph.videogallery.field_col1_content
+field_name: field_col1_content
+entity_type: paragraph
+bundle: videogallery
+label: Video
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      simple_video: simple_video
+    target_bundles_drag_drop:
+      simple_video:
+        enabled: true
+        weight: 12
+      anchor:
+        weight: 13
+        enabled: false
+      box_highlight:
+        weight: 14
+        enabled: false
+      grid_list:
+        weight: 15
+        enabled: false
+      hero:
+        weight: 16
+        enabled: false
+      photogallery:
+        weight: 17
+        enabled: false
+      section:
+        weight: 18
+        enabled: false
+      simple_button:
+        weight: 19
+        enabled: false
+      simple_image:
+        weight: 20
+        enabled: false
+      simple_text:
+        weight: 21
+        enabled: false
+      videogallery:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

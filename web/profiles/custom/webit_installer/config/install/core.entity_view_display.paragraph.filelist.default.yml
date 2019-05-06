@@ -1,0 +1,30 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.filelist.field_browser_files
+    - field.field.paragraph.filelist.field_label
+    - paragraphs.paragraphs_type.filelist
+id: paragraph.filelist.default
+targetEntityType: paragraph
+bundle: filelist
+mode: default
+content:
+  field_browser_files:
+    type: entity_reference_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_label:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

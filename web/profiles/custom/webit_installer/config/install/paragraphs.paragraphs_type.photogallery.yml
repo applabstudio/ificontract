@@ -1,0 +1,8 @@
+langcode: it
+status: true
+dependencies: {  }
+id: photogallery
+label: Fotogallery
+icon_uuid: null
+description: 'Aggiunge una fotogallery'
+behavior_plugins: {  }

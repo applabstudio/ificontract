@@ -1,0 +1,8 @@
+langcode: it
+status: true
+dependencies: {  }
+id: simple_button
+label: Bottone
+icon_uuid: null
+description: 'Inserisci un bottone che linka ad un contenuto, ad un''ancora o ad un sito esterno'
+behavior_plugins: {  }

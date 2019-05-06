@@ -1,0 +1,19 @@
+langcode: it
+status: true
+dependencies:
+  module:
+    - masquerade
+  theme:
+    - adminimal_theme
+id: masquerade
+theme: adminimal_theme
+region: content
+weight: -1
+provider: null
+plugin: masquerade
+settings:
+  id: masquerade
+  label: Masquerade
+  provider: masquerade
+  label_display: '0'
+visibility: {  }

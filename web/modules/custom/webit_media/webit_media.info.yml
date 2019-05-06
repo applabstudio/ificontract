@@ -1,0 +1,25 @@
+name: 'Webit Media'
+type: module
+description: 'Manages type of media contents and entity browsers in the site.'
+core: 8.x
+package: Custom
+version: 8.x-1.0
+dependencies:
+  - crop
+  - dropzonejs_eb_widget
+  - embed
+  - entity_browser
+  - entity_embed
+  - field
+  - file
+  - focal_point
+  - image
+  - language
+  - media
+  - node
+  - path
+  - responsive_image
+  - system
+  - user
+  - video_embed_field
+  - views

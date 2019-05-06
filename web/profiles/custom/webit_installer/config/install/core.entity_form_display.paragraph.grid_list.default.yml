@@ -1,0 +1,37 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.grid_list.field_col1_content
+    - field.field.paragraph.grid_list.field_num_grid_cols
+    - paragraphs.paragraphs_type.grid_list
+  module:
+    - paragraphs
+id: paragraph.grid_list.default
+targetEntityType: paragraph
+bundle: grid_list
+mode: default
+content:
+  field_col1_content:
+    weight: 1
+    settings:
+      title: Elemento
+      title_plural: Elementi
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_num_grid_cols:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

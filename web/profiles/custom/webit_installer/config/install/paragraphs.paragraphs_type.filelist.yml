@@ -1,0 +1,8 @@
+langcode: it
+status: true
+dependencies: {  }
+id: filelist
+label: 'Elenco file'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,12 @@
+webit.phone:
+  label: 'All resolutions'
+  mediaQuery: ''
+  weight: 0
+webit.tablet:
+  label: 'Tablet Up'
+  mediaQuery: 'all and (min-width: 768px)'
+  weight: 1
+webit.desktop:
+  label: 'Desktop Up'
+  mediaQuery: 'all and (min-width: 1200px)'
+  weight: 2

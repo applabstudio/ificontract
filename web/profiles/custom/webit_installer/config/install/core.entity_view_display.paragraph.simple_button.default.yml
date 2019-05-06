@@ -1,0 +1,69 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.simple_button.field_browser_files
+    - field.field.paragraph.simple_button.field_btn_color
+    - field.field.paragraph.simple_button.field_h_align
+    - field.field.paragraph.simple_button.field_label
+    - field.field.paragraph.simple_button.field_link
+    - field.field.paragraph.simple_button.field_link_type
+    - paragraphs.paragraphs_type.simple_button
+  module:
+    - link
+    - options
+id: paragraph.simple_button.default
+targetEntityType: paragraph
+bundle: simple_button
+mode: default
+content:
+  field_browser_files:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_btn_color:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_h_align:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_label:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_link:
+    weight: 3
+    label: above
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_link_type:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

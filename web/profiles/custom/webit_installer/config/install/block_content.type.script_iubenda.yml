@@ -1,0 +1,7 @@
+langcode: it
+status: true
+dependencies: {  }
+id: script_iubenda
+label: 'Script Iubenda'
+revision: 0
+description: ''

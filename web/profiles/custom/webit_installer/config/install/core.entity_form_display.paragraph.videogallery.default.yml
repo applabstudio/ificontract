@@ -1,0 +1,38 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.videogallery.field_col1_content
+    - field.field.paragraph.videogallery.field_label
+    - paragraphs.paragraphs_type.videogallery
+  module:
+    - paragraphs
+id: paragraph.videogallery.default
+targetEntityType: paragraph
+bundle: videogallery
+mode: default
+content:
+  field_col1_content:
+    weight: 1
+    settings:
+      title: Video
+      title_plural: Video
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: simple_video
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_label:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,21 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - block_content.type.links_iubenda
+    - field.field.block_content.links_iubenda.field_cookie_policy_id
+id: block_content.links_iubenda.default
+targetEntityType: block_content
+bundle: links_iubenda
+mode: default
+content:
+  field_cookie_policy_id:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

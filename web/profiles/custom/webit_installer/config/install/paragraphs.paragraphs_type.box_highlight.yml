@@ -1,0 +1,8 @@
+langcode: it
+status: true
+dependencies: {  }
+id: box_highlight
+label: 'Box Highlight'
+icon_uuid: null
+description: 'Inserisci un box di testo in evidenza'
+behavior_plugins: {  }

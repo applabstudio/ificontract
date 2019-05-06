@@ -1,0 +1,27 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_browser_files
+    - media.type.file
+    - paragraphs.paragraphs_type.simple_button
+id: paragraph.simple_button.field_browser_files
+field_name: field_browser_files
+entity_type: paragraph
+bundle: simple_button
+label: File
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,70 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_col3_content
+    - paragraphs.paragraphs_type.grid_row
+  module:
+    - entity_reference_revisions
+id: paragraph.grid_row.field_col3_content
+field_name: field_col3_content
+entity_type: paragraph
+bundle: grid_row
+label: 'Contenuto colonna 3'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      grid_row:
+        weight: 16
+        enabled: false
+      accordion:
+        weight: 17
+        enabled: false
+      accordion_item:
+        weight: 18
+        enabled: false
+      anchor:
+        weight: 19
+        enabled: false
+      box_highlight:
+        weight: 20
+        enabled: false
+      filelist:
+        weight: 21
+        enabled: false
+      grid_list:
+        weight: 22
+        enabled: false
+      hero:
+        weight: 23
+        enabled: false
+      photogallery:
+        weight: 24
+        enabled: false
+      section:
+        weight: 25
+        enabled: false
+      simple_button:
+        weight: 26
+        enabled: false
+      simple_image:
+        weight: 27
+        enabled: false
+      simple_text:
+        weight: 28
+        enabled: false
+      simple_video:
+        weight: 29
+        enabled: false
+      videogallery:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions

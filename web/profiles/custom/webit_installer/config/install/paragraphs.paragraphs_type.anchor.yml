@@ -1,0 +1,8 @@
+langcode: it
+status: true
+dependencies: {  }
+id: anchor
+label: Ancora
+icon_uuid: null
+description: 'Aggiunge un''ancora'
+behavior_plugins: {  }

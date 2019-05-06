@@ -1,0 +1,35 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - image.style.linkit_result_thumbnail
+  module:
+    - file
+    - image
+    - node
+id: default
+label: Default
+description: ''
+attributes: {  }
+matchers:
+  89565089-e361-4f2b-8274-6ea2a1a30969:
+    uuid: 89565089-e361-4f2b-8274-6ea2a1a30969
+    id: 'entity:node'
+    weight: 0
+    settings:
+      result_description: ''
+      bundles: {  }
+      group_by_bundle: true
+      include_unpublished: false
+  a2f1f458-9454-49f6-8b3d-5e2555191420:
+    uuid: a2f1f458-9454-49f6-8b3d-5e2555191420
+    id: 'entity:file'
+    weight: 0
+    settings:
+      result_description: 'File caricati Webit'
+      bundles: null
+      group_by_bundle: null
+      images:
+        show_dimensions: false
+        show_thumbnail: true
+        thumbnail_image_style: linkit_result_thumbnail

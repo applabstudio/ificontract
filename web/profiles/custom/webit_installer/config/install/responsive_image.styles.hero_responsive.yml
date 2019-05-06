@@ -1,0 +1,28 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - image.style.hero_lg
+    - image.style.hero_md
+    - image.style.hero_sm
+    - image.style.hero_xl
+    - image.style.hero_xs
+  theme:
+    - webit
+id: hero_responsive
+label: 'Hero Responsive'
+image_style_mappings:
+  -
+    breakpoint_id: webit.phone
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - hero_lg
+        - hero_md
+        - hero_sm
+        - hero_xl
+        - hero_xs
+breakpoint_group: webit
+fallback_image_style: hero_xs

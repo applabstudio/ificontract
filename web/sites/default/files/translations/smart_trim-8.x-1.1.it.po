@@ -1,0 +1,28 @@
+# Italian translation of Smart Trim (8.x-1.1)
+# Copyright (c) 2018 by the Italian translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Smart Trim (8.x-1.1)\n"
+"POT-Creation-Date: 2018-01-18 19:43+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "Suffix"
+msgstr "Suffisso"
+msgid "Summary"
+msgstr "Sommario"
+msgid "Fields"
+msgstr "Campi"
+msgid "characters"
+msgstr "caratteri"
+msgid "More link text"
+msgstr "Testo del link Continua"
+msgid "About"
+msgstr "Informazioni"
+msgid "Trim length"
+msgstr "Lunghezza del testo troncato"

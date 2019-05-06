@@ -1,0 +1,14 @@
+langcode: it
+status: true
+dependencies: {  }
+name: xl
+label: XL
+effects:
+  2ef17236-6aa5-4ce3-92c1-98be6f3862e7:
+    uuid: 2ef17236-6aa5-4ce3-92c1-98be6f3862e7
+    id: image_scale
+    weight: 1
+    data:
+      width: 2048
+      height: null
+      upscale: false

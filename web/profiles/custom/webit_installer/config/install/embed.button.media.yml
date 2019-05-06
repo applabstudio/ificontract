@@ -1,0 +1,23 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - media.type.image
+  content:
+    - 'file:file:96418f00-842e-4ff6-86d2-bd3c0598e353'
+  module:
+    - entity_embed
+    - media
+label: Media
+id: media
+type_id: entity
+type_settings:
+  entity_type: media
+  bundles:
+    - image
+  display_plugins:
+    - 'view_mode:media.full'
+  entity_browser: browser_immagini_editor
+  entity_browser_settings:
+    display_review: false
+icon_uuid: 96418f00-842e-4ff6-86d2-bd3c0598e353

@@ -1,0 +1,8 @@
+langcode: it
+status: true
+dependencies: {  }
+id: hero
+label: 'Immagine hero'
+icon_uuid: null
+description: 'Aggiunge un''immagine hero di testata'
+behavior_plugins: {  }

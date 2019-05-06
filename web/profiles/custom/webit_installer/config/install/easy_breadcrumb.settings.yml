@@ -1,0 +1,7 @@
+include_home_segment: 1
+home_segment_title: Home
+include_title_segment: 1
+language_path_prefix_as_segment: false
+use_menu_title_as_fallback: 0
+remove_repeated_segments: 1
+langcode: it

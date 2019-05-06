@@ -1,0 +1,241 @@
+{
+    "name": "webit/drupal8-webit",
+    "description": "Webit Project template for Drupal 8 projects with composer",
+    "type": "project",
+    "license": "GPL-2.0+",
+    "authors": [
+    {
+        "name": "Luca Serio",
+        "homepage": "https://www.drupal.org/u/lserio",
+        "role": "mantainer"
+    },
+    {
+        "name": "Roberto Balacchi",
+        "homepage": "https://www.drupal.org/u/robybala",
+        "role": "mantainer"
+    },
+    {
+        "name": "Italo Mairo",
+        "homepage": "https://www.drupal.org/u/itamair",
+        "role": "mantainer"
+    }
+    ],
+    "repositories": {
+    "drupal": {
+        "type": "composer",
+        "url": "https://packages.drupal.org/8"
+    }
+    },
+    "require": {
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6",
+        "drupal-composer/drupal-scaffold": "^2.2",
+        "drupal/address": "^1.4",
+        "drupal/admin_toolbar": "^1.22",
+        "drupal/adminimal_admin_toolbar": "^1.5",
+        "drupal/adminimal_theme": "^1.3",
+        "drupal/antibot": "^1.2",
+        "drupal/auto_entitylabel": "^2.1@beta",
+        "drupal/autocomplete_deluxe": "^1.0@beta",
+        "drupal/backup_migrate": "^4.0@beta",
+        "drupal/better_exposed_filters": "^3.0@alpha",
+        "drupal/betterlt": "^1.1",
+        "drupal/captcha": "^1.0@beta",
+        "drupal/coffee": "^1.0@beta",
+        "drupal/components": "^1.0",
+        "drupal/conditional_fields": "^1.0@alpha",
+        "drupal/config_exclude": "1.x-dev",
+        "drupal/config_ignore": "^2.1",
+        "drupal/console": "1.4.0",
+        "drupal/core": "8.7.*",
+        "drupal/default_content": "^1.0@alpha",
+        "drupal/diff": "^1.0@RC",
+        "drupal/disable_language": "^1.0@beta",
+        "drupal/dropzonejs": "^2.0@alpha",
+        "drupal/drupal-library-installer-plugin": "^0.3.0",
+        "drupal/duplicate_role": "^1.0",
+        "drupal/easy_breadcrumb": "^1.6",
+        "drupal/editor_advanced_link": "^1.4",
+        "drupal/entity_browser": "^1.4",
+        "drupal/entity_browser_enhanced": "^1.0@beta",
+        "drupal/entity_clone": "^1.0@alpha",
+        "drupal/entity_embed": "^1.0@beta",
+        "drupal/entity_embed_link": "^1.0",
+        "drupal/focal_point": "^1.0@beta",
+        "drupal/geocoder": "^2.0@beta",
+        "drupal/geofield": "^1.0",
+        "drupal/geofield_map": ">1.0",
+        "drupal/glossify": "^1.0@beta",
+        "drupal/google_analytics": "^2.2",
+        "drupal/google_tag": "1.0",
+        "drupal/inline_entity_form": "^1.0@beta",
+        "drupal/jsonapi": "^1.22",
+        "drupal/lang_dropdown": "^2.0@beta",
+        "drupal/linkit": "^4.3",
+        "drupal/mailsystem": "^4.1",
+        "drupal/masquerade": "^2.0@beta",
+        "drupal/maxlength": "^1.0@beta",
+        "drupal/memcache": "^2.0",
+        "drupal/memcache_admin": "^2.0",
+        "drupal/menu_admin_per_menu": "^1.0",
+        "drupal/metatag": "^1.4",
+        "drupal/migrate_plus": "^2.0",
+        "drupal/migrate_tools": "^2.0",
+        "drupal/paragraphs": "^1.2",
+        "drupal/paragraphs_previewer": "^1.0",
+        "drupal/path_redirect_import": "^1.0@beta",
+        "drupal/pathauto": "^1.0",
+        "drupal/permissions_filter": "^1.0",
+        "drupal/rabbit_hole": "^1.0@beta",
+        "drupal/recaptcha": "^2.2",
+        "drupal/schema_metatag": "^1.0@RC",
+        "drupal/search_exclude": "^1.1",
+        "drupal/shs": "^1.0@alpha",
+        "drupal/simple_megamenu": "^1.0@beta",
+        "drupal/simple_sitemap": "^2.11",
+        "drupal/smart_trim": "^1.1",
+        "drupal/swiftmailer": "^1.0@beta",
+        "drupal/taxonomy_access_fix": "^2.1",
+        "drupal/taxonomy_menu_ui": "^1.0@beta",
+        "drupal/twig_field_value": "^1.1",
+        "drupal/twig_tweak": "^2.0",
+        "drupal/user_default_page": "1.x-dev",
+        "drupal/video_embed_field": "^1.5",
+        "drupal/views_infinite_scroll": "^1.5",
+        "drupal/viewsreference": "^1.2",
+        "drupal/webform": "^5.0@RC",
+        "drupal/weight": "^3.0",
+        "drupal/yoast_seo": "^1.3",
+        "drush/drush": "^9.6",
+        "vardot/dropzone": "4.3.0.1",
+        "webflo/drupal-finder": "^1.0.0",
+        "webmozart/path-util": "^2.3"
+    },
+    "require-dev": {
+    "behat/mink": "~1.7",
+    "behat/mink-goutte-driver": "~1.2",
+    "drupal/config_inspector": "^1.0@beta",
+    "drupal/config_installer": "^1.5",
+    "drupal/devel": ">=1.2",
+    "drupal/features": "^3.5",
+    "drupal/stage_file_proxy": "^1.0@alpha",
+    "drupal/twig_xdebug": "^1.0",
+    "jcalderonzumba/gastonjs": "~1.0.2",
+    "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
+    "mikey179/vfsstream": "~1.2",
+    "phpunit/phpunit": ">=4.8.28 <5",
+    "symfony/css-selector": "~2.8|~3.0"
+    },
+    "conflict": {
+    "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+    "discard-changes": true,
+    "sort-packages": true,
+    "platform": {
+       "php": "7.2"
+    }
+    },
+    "autoload": {
+    "classmap": [
+        "scripts/composer/ScriptHandler.php"
+    ]
+    },
+    "scripts": {
+    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+    "pre-install-cmd": [
+        "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+    ],
+    "pre-update-cmd": [
+        "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+    ],
+    "post-install-cmd": [
+        "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+    ],
+    "post-update-cmd": [
+        "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+    ]
+    },
+    "extra": {
+    "installer-paths": {
+        "web/core": [
+            "type:drupal-core"
+        ],
+        "web/libraries/{$name}": [
+            "type:drupal-library"
+        ],
+        "web/modules/contrib/{$name}": [
+            "type:drupal-module"
+        ],
+        "web/profiles/contrib/{$name}": [
+            "type:drupal-profile"
+        ],
+        "web/themes/contrib/{$name}": [
+            "type:drupal-theme"
+        ],
+        "drush/contrib/{$name}": [
+            "type:drupal-drush"
+        ]
+    },
+    "drupal-libraries": {
+        "library-directory": "web/libraries",
+        "libraries": [
+            {"name": "dropzone","package": "vardot/dropzone"}
+        ]
+    },
+    "patches": {
+        "drupal/core": {
+            "Issue #2893892: Fixed Warning Invalid argument supplied for foreach() in Drupal":
+            "https://www.drupal.org/files/issues/patch_empty_fix.patch",
+            "file - allow change link options in preprocess / twig for target blank etc":
+            "https://www.drupal.org/files/issues/2928986-target-blank.patch",
+            "Issue #2700667: Notice: Undefined index: #type in drupal_process_states()":
+            "https://www.drupal.org/files/issues/undefined_index_type_states-2700667-22.patch",
+            "Links with no path get active class on front page":
+            "https://www.drupal.org/files/issues/links_with_no_path_get-2838351-12.patch",
+            "'Account administration pages' language negotiation causes 'access denied' in toolbar subtree caching.":
+            "https://www.drupal.org/files/issues/2868193-10.patch",
+            "Admin toolbar should always be rendered in the admin language (if set)":
+            "https://www.drupal.org/files/issues/2313309-40.patch",
+            "Issue #2123543: Add string context and location filters to the translate interface":
+            "https://www.drupal.org/files/issues/2123543-46.patch",
+            "Regression: not possible to delete source strings in Drupal 8 interface translation":
+            "https://www.drupal.org/files/issues/source-delete-impossible-2503893-4.patch"
+        },
+        "drupal/coffee": {
+            "Issue #2815381: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
+            "https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch",
+            "Issue #2872093: Coffee css fixes in RTL":
+            "https://www.drupal.org/files/issues/2872093-10.patch"
+        },
+        "drupal/paragraphs": {
+            "Issue #2461695: Support translatable paragraph entity reference revision field":
+            "https://www.drupal.org/files/issues/2018-11-01/2461695-261.patch",
+            "Issue #2868155: Add new hooks to allow easier editing of paragraph forms":
+            "https://www.drupal.org/files/issues/2868155-16.patch",
+            "Issue #2877927: Show add widget between paragraphs on hover":
+            "https://www.drupal.org/files/issues/2877927_29.patch"
+        },
+        "drupal/yoast_seo": {
+            "Undefined index: #parents in Drupal...":
+            "https://www.drupal.org/files/issues/form_state_error_no_parents-2829569-2.patch"
+        },
+        "drupal/focal_point": {
+            "Issue #2916562: Broken image preview":
+            "https://www.drupal.org/files/issues/2019-03-30/2916562-39.patch"
+        },
+        "drupal/rabbit_hole": {
+            "Change Entity typehint to EntityInterface":
+            "https://www.drupal.org/files/issues/2019-03-20/3038539-5.patch"
+        },
+        "drupal/betterlt":{
+            "Multilingual Icons: now just shown for English (patch provided)":
+            "https://www.drupal.org/files/issues/betterlt_multilingual_icons_2945002-5.patch",
+            "Twig error after enabling betterlt":
+            "https://www.drupal.org/files/issues/2940093-missing-template.patch"
+        }
+    }
+    }
+    }

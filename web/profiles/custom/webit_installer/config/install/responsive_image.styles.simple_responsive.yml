@@ -1,0 +1,28 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - image.style.lg
+    - image.style.md
+    - image.style.sm
+    - image.style.xl
+    - image.style.xs
+  theme:
+    - webit
+id: simple_responsive
+label: 'Simple Responsive'
+image_style_mappings:
+  -
+    breakpoint_id: webit.phone
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - lg
+        - md
+        - sm
+        - xl
+        - xs
+breakpoint_group: webit
+fallback_image_style: '_original image_'

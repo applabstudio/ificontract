@@ -1,0 +1,8 @@
+langcode: it
+status: true
+dependencies: {  }
+id: media_type_file
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301

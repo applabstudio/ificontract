@@ -1,0 +1,29 @@
+langcode: it
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_h_align
+field_name: field_h_align
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: align-left
+      label: Sinistra
+    -
+      value: align-center
+      label: Centro
+    -
+      value: align-right
+      label: Destra
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,8 @@
+langcode: it
+status: true
+dependencies: {  }
+id: section
+label: 'Fascia orizzontale'
+icon_uuid: null
+description: 'Crea una fascia orizzontale all''interno della tua pagina'
+behavior_plugins: {  }

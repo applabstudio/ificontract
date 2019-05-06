@@ -1,0 +1,20 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.box_highlight
+  module:
+    - text
+id: paragraph.box_highlight.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: box_highlight
+label: Testo
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

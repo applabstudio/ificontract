@@ -1,0 +1,20 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon
+    - paragraphs.paragraphs_type.box_highlight
+  module:
+    - options
+id: paragraph.box_highlight.field_icon
+field_name: field_icon
+entity_type: paragraph
+bundle: box_highlight
+label: Icona
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

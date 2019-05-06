@@ -1,0 +1,13 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - user.role.webit
+  module:
+    - user
+id: user_remove_role_action.webit
+label: 'Remove the Webit role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: webit

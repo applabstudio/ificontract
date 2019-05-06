@@ -1,0 +1,8 @@
+langcode: it
+status: true
+dependencies: {  }
+id: simple_video
+label: Video
+icon_uuid: null
+description: 'Aggiunge un video caricato su YouTube o Vimeo'
+behavior_plugins: {  }

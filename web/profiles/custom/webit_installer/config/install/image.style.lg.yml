@@ -1,0 +1,14 @@
+langcode: it
+status: true
+dependencies: {  }
+name: lg
+label: LG
+effects:
+  12bfb9b4-3408-4f6d-9df5-23b666f841f0:
+    uuid: 12bfb9b4-3408-4f6d-9df5-23b666f841f0
+    id: image_scale
+    weight: 1
+    data:
+      width: 1536
+      height: null
+      upscale: false

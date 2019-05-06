@@ -1,0 +1,165 @@
+<?php
+
+
+/**function webit_preprocess_menu(&$vars) {
+  if($vars['menu_name'] == 'main') {
+    $vars['attributes']['class'] = ['mainmenu'];
+  }
+}**/
+
+/**
+ * Implements hook_theme_suggestions_alter
+ * Aggiunge suggestion per i form
+ */
+function webit_theme_suggestions_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element']) && isset($variables['element']['#type']) && $variables['element']['#type'] == 'form') {
+    $original_theme_hook = $variables['theme_hook_original'];
+    $suggestions[] = $original_theme_hook . '__' . str_replace('-', '_', $variables['element']['#id']);
+  }
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ * Aggiunge suggestion per form element
+ */
+function webit_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
+  if (!empty($variables['element']['#only_input']) && $variables['element']['#only_input'] == true) {
+    $suggestions[] = 'form_element__only_input';
+  }
+
+  if ($variables['element']['#type'] == 'checkbox') {
+    $suggestions[] = 'form_element__checkbox';
+  }
+
+  if ($variables['element']['#type'] == 'radio') {
+    $suggestions[] = 'form_element__radio';
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+/*function webit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if (isset($form['#webform_id'])) {
+    $form['actions']['submit']['#attributes']['data-twig-suggestion'] = 'button';
+  }
+
+  if ($form_id == 'user_login_form') {
+    $form['actions']['submit']['#attributes']['data-twig-suggestion'] = 'button';
+  }
+}*/
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+/**function webit_theme_suggestions_input_alter(array &$suggestions, array $variables) {
+  $element = $variables['element'];
+  if (isset($element['#attributes']['data-twig-suggestion'])) {
+    $suggestions[] = 'input__' . $element['#type'];
+    $suggestions[] = 'input__' . $element['#type'] . '__' . $element['#attributes']['data-twig-suggestion'];
+  }
+  return $suggestions;
+}**/
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function webit_preprocess_form_element(&$variables) {
+  $variables['attributes']['class'][] = 'field';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function webit_preprocess_input(&$variables) {
+  $variables['attributes']['class'][] = 'input';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function webit_preprocess_textarea(&$variables) {
+  $variables['attributes']['class'][] = 'input';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function webit_preprocess_fieldset(&$variables) {
+  $variables['attributes']['class'][] = 'field';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function webit_preprocess_image(&$variables) {
+  $variables['attributes']['class'][] = 'lazyload';
+  $variables['attributes']['data-sizes'] = 'auto';
+  if (isset($variables['attributes']['srcset'])) {
+    $variables['attributes']['data-srcset'] = $variables['attributes']['srcset'];
+    $srcsets = explode(',', $variables['attributes']['srcset']->value());
+    $widths = [];
+    foreach ($srcsets as $srcset) {
+      $w = explode(' ', trim($srcset))[1];
+      $w = (int) substr($w, 0, -1);
+      array_push($widths, $w);
+    }
+
+    $widthVal = max($widths);
+
+    $variables['attributes']['width'] = $widthVal;
+
+    unset($variables['attributes']['srcset']);
+  }
+  if (isset($variables['attributes']['src'])) {
+    $variables['attributes']['data-src'] = $variables['attributes']['src'];
+  }
+  //$variables['attributes']['src'] = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ * Da utilizzare in caso di infinite scroll su una vista
+ */
+/*function webit_preprocess_views_view(&$variables) {
+  if ($variables['id'] == 'magazine') {
+    if ($variables['display_id'] == 'block_magazine'
+      || $variables['display_id'] == 'block_news'
+      || $variables['display_id'] == 'block_events'
+      || $variables['display_id'] == 'block_job'
+      || $variables['display_id'] == 'block_press_review') {
+      $variables['rows']['#attributes']['class'][] = 'grid-list grid-list--3col';
+    }
+  }
+}*/
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ * Esempio: alterazione form di ricerca (blocco)
+ */
+/*function webit_form_search_block_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['keys']['#title']=t('Cerca');
+  $form['keys']['#attributes']['placeholder'] = $form['keys']['#title'];
+  $form['keys']['#attributes']['class'] = ['search-form__input'];
+  $form['keys']['#only_input'] = true;
+  $form['actions']['submit']['#only_input'] = true;
+  $form['actions']['submit']['#attributes']['data-twig-suggestion'] = 'search_results_submit';
+  unset($form['keys']['#title']);
+  unset($form['keys']['#theme_wrappers']);
+}*/
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ * Esempio: alterazione form di ricerca (pagina risultati di ricerca)
+ */
+/*function webit_form_search_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['basic']['keys']['#title']=t('Cerca');
+  $form['basic']['keys']['#attributes']['placeholder'] = $form['basic']['keys']['#title'];
+  $form['basic']['keys']['#attributes']['class'] = ['search-form__input'];
+  $form['basic']['keys']['#only_input'] = true;
+  $form['basic']['submit']['#only_input'] = true;
+  $form['basic']['submit']['#attributes']['data-twig-suggestion'] = 'search_results_submit';
+  //unset($form['keys']['#title']);
+  unset($form['basic']['keys']['#theme_wrappers']);
+}*/

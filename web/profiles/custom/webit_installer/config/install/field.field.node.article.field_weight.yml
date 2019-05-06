@@ -1,0 +1,23 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight
+    - node.type.article
+  module:
+    - weight
+id: node.article.field_weight
+field_name: field_weight
+entity_type: node
+bundle: article
+label: Peso
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings:
+  range: '100'
+field_type: weight

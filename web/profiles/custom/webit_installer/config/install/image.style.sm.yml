@@ -1,0 +1,14 @@
+langcode: it
+status: true
+dependencies: {  }
+name: sm
+label: SM
+effects:
+  6a97a96b-3c2d-4ab5-8939-39bada3ddaef:
+    uuid: 6a97a96b-3c2d-4ab5-8939-39bada3ddaef
+    id: image_scale
+    weight: 1
+    data:
+      width: 800
+      height: null
+      upscale: false

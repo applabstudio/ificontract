@@ -1,0 +1,15 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for tabs.
+ */
+#}
+{% set attributes = attributes.addClass('block-local-tasks-block') %}
+{% block content %}
+  {% if content %}
+    <nav class="blt-tabs" role="navigation" aria-label="{{ 'Tabs'|t }}">
+      {{ content }}
+    </nav>
+  {% endif %}
+{% endblock %}

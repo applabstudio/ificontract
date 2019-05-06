@@ -1,0 +1,7 @@
+name: webit_memcache
+type: module
+description: A Webit memecache module
+core: 8.x
+package: Custom
+dependencies:
+  - memcache

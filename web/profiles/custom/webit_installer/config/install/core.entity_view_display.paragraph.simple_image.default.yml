@@ -1,0 +1,31 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.simple_image.field_browser_image
+    - field.field.paragraph.simple_image.field_h_align
+    - paragraphs.paragraphs_type.simple_image
+  module:
+    - options
+id: paragraph.simple_image.default
+targetEntityType: paragraph
+bundle: simple_image
+mode: default
+content:
+  field_browser_image:
+    weight: 0
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_h_align:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

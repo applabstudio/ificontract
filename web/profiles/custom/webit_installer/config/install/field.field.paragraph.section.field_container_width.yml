@@ -1,0 +1,20 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_container_width
+    - paragraphs.paragraphs_type.section
+  module:
+    - options
+id: paragraph.section.field_container_width
+field_name: field_container_width
+entity_type: paragraph
+bundle: section
+label: 'Larghezza container'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

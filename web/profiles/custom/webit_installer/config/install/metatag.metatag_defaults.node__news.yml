@@ -1,0 +1,10 @@
+langcode: it
+status: true
+dependencies: {  }
+id: node__news
+label: 'Contenuto: News'
+tags:
+  og_image_height: '[node:field_image:lg:height]'
+  og_type: article
+  og_image_width: '[node:field_image:lg:width]'
+  og_image: '[node:field_image:lg:url]'

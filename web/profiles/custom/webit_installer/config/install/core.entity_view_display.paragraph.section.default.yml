@@ -1,0 +1,52 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.section.field_col1_content
+    - field.field.paragraph.section.field_container_width
+    - field.field.paragraph.section.field_title
+    - field.field.paragraph.section.field_title_h1
+    - paragraphs.paragraphs_type.section
+  module:
+    - entity_reference_revisions
+    - options
+    - text
+id: paragraph.section.default
+targetEntityType: paragraph
+bundle: section
+mode: default
+content:
+  field_col1_content:
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_container_width:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_title:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title_h1:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden: {  }

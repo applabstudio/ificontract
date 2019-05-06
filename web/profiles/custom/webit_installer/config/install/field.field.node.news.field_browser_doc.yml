@@ -1,0 +1,27 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_browser_doc
+    - media.type.file
+    - node.type.news
+id: node.news.field_browser_doc
+field_name: field_browser_doc
+entity_type: node
+bundle: news
+label: 'Browser doc'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

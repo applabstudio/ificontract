@@ -1,0 +1,52 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.box_highlight.field_body
+    - field.field.paragraph.box_highlight.field_icon
+    - field.field.paragraph.box_highlight.field_link
+    - field.field.paragraph.box_highlight.field_title
+    - paragraphs.paragraphs_type.box_highlight
+  module:
+    - link
+    - options
+    - text
+id: paragraph.box_highlight.default
+targetEntityType: paragraph
+bundle: box_highlight
+mode: default
+content:
+  field_body:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_icon:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_link:
+    weight: 3
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_title:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

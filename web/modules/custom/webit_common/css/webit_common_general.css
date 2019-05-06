@@ -1,0 +1,19 @@
+
+.views-ui-display-tab-setting.overridden,
+.views-ui-display-tab-bucket.overridden {
+  font-style: italic;
+  color: red !important;
+  font-weight: bold;
+}
+th.views-field-webit-bulk-form input.form-checkbox {
+  margin-left: 27px;
+}
+td.views-field-webit-bulk-form {
+  /*display: flex;*/
+}
+td.views-field-webit-bulk-form .form-type-checkbox {
+  margin: 0;
+}
+.paragraphs-subform > div + div {
+  margin-top: 16px;
+}

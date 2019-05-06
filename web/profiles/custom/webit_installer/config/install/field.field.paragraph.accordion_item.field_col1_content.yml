@@ -1,0 +1,75 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_col1_content
+    - paragraphs.paragraphs_type.accordion_item
+    - paragraphs.paragraphs_type.filelist
+    - paragraphs.paragraphs_type.simple_image
+    - paragraphs.paragraphs_type.simple_text
+    - paragraphs.paragraphs_type.simple_video
+  module:
+    - entity_reference_revisions
+id: paragraph.accordion_item.field_col1_content
+field_name: field_col1_content
+entity_type: paragraph
+bundle: accordion_item
+label: Contenuti
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      filelist: filelist
+      simple_image: simple_image
+      simple_text: simple_text
+      simple_video: simple_video
+    target_bundles_drag_drop:
+      accordion_item:
+        weight: 15
+        enabled: false
+      accordion:
+        weight: 16
+        enabled: false
+      anchor:
+        weight: 17
+        enabled: false
+      box_highlight:
+        weight: 18
+        enabled: false
+      filelist:
+        enabled: true
+        weight: 19
+      grid_list:
+        weight: 20
+        enabled: false
+      hero:
+        weight: 21
+        enabled: false
+      photogallery:
+        weight: 22
+        enabled: false
+      section:
+        weight: 23
+        enabled: false
+      simple_button:
+        weight: 24
+        enabled: false
+      simple_image:
+        enabled: true
+        weight: 25
+      simple_text:
+        enabled: true
+        weight: 26
+      simple_video:
+        enabled: true
+        weight: 27
+      videogallery:
+        weight: 28
+        enabled: false
+field_type: entity_reference_revisions

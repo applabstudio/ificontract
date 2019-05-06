@@ -1,0 +1,54 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.section.field_col1_content
+    - field.field.paragraph.section.field_container_width
+    - field.field.paragraph.section.field_title
+    - field.field.paragraph.section.field_title_h1
+    - paragraphs.paragraphs_type.section
+  module:
+    - paragraphs
+    - text
+id: paragraph.section.default
+targetEntityType: paragraph
+bundle: section
+mode: default
+content:
+  field_col1_content:
+    weight: 3
+    settings:
+      title: 'Riga di contenuti'
+      title_plural: 'Righe di contenuti'
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: grid_row
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_container_width:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_title_h1:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

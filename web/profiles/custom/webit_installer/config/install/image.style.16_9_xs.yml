@@ -1,0 +1,16 @@
+langcode: it
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 16_9_xs
+label: '16:9 XS'
+effects:
+  cf6c6144-5609-4044-9d10-4e85f666a883:
+    uuid: cf6c6144-5609-4044-9d10-4e85f666a883
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 225
+      crop_type: focal_point

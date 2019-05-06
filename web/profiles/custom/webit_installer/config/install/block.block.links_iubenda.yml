@@ -1,0 +1,24 @@
+langcode: it
+status: true
+dependencies:
+  content:
+    - 'block_content:links_iubenda:3cdc6119-1dd8-4f39-b13e-7515753bd1bd'
+  module:
+    - block_content
+  theme:
+    - webit
+id: links_iubenda
+theme: webit
+region: hidden
+weight: -3
+provider: null
+plugin: 'block_content:3cdc6119-1dd8-4f39-b13e-7515753bd1bd'
+settings:
+  id: 'block_content:3cdc6119-1dd8-4f39-b13e-7515753bd1bd'
+  label: 'Links Iubenda'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

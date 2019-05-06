@@ -1,0 +1,15 @@
+langcode: it
+status: true
+dependencies: {  }
+id: default
+label: Default
+user_roles:
+  administrator: administrator
+  editor: editor
+  webit: webit
+users: null
+weight: -1
+login_redirect: /admin/content
+login_redirect_message: ''
+logout_redirect: '<front>'
+logout_redirect_message: ''

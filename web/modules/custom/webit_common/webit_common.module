@@ -1,0 +1,165 @@
+<?php
+
+/**
+ * @file
+ * Contains webit_common.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_help().
+ */
+function webit_common_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the Webit_common module.
+    case 'help.page.webit_common':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('A custom module for specific Webit needs') . '</p>';
+      return $output;
+
+    default:
+      return '';
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function webit_common_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  switch ($form_id) {
+    case 'view_edit_form':
+      $form['#attached']['library'][] = 'webit_common/webit_common.general';
+      break;
+    case 'node_page_form':
+    case 'node_page_edit_form':
+      $form['#attached']['library'][] = 'webit_common/webit_common.general';
+      break;
+  }
+}
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function webit_common_views_data_alter(array &$data) {
+
+  $data['node']['webit_bulk_form'] = [
+    'title' => t('Webit Node operations bulk form'),
+    'help' => t('Add a custom Webit form element that lets you run operations on multiple nodes.'),
+    'field' => [
+      'id' => 'webit_bulk_form',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function webit_common_preprocess_views_view_table(&$variables) {
+  $variables['#attached']['library'][] = 'webit_common/webit_common.general';
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function webit_common_page_attachments(array &$page) {
+  $author = [
+    '#tag' => 'meta',
+    '#attributes' => [
+      'name' => 'author',
+      'content' => 'webit.it',
+    ],
+  ];
+  $page['#attached']['html_head'][] = [$author, 'author'];
+}
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ */
+function webit_common_form_paragraphs_subform_grid_row_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
+
+        $parents_string = '';
+
+        foreach($element['#parents'] as $k => $parent ){
+          if($k==0)
+            $parents_string.=$parent;
+          else
+            $parents_string.='['.$parent.']';
+        }
+
+        $selector = 'select[name="'.$parents_string.'[field_cols_num]"]';
+
+        // Dependent fields.
+
+        $element['field_col1_content']['#states'] = [
+            'visible' => [
+                $selector => [
+                    array('value' => '1'),
+                    array('value' => '2'),
+                    array('value' => '3')
+                ],
+            ]
+        ];
+
+        $element['field_col2_content']['#states'] = [
+            'visible' => [
+                $selector => [
+                    array('value' => '2'),
+                    array('value' => '3')
+                ],
+            ]
+        ];
+        $element['field_col3_content']['#states'] = [
+            'visible' => [
+                $selector => [
+                    array('value' => '3')
+                ],
+            ]
+        ];
+
+        $element['field_cols_width']['#states'] = [
+            'visible' => [
+                $selector => [
+                    array('value' => '2')
+                ],
+            ]
+        ];
+}
+
+/**
+ * Implements hook_form_paragraphs_subform_TYPE_alter().
+ */
+function webit_common_form_paragraphs_subform_simple_button_alter(array &$subform, \Drupal\Core\Form\FormStateInterface $form_state, $delta) {
+  $parents_string = '';
+
+  foreach ($subform['#parents'] as $k => $parent) {
+    if ($k == 0) {
+      $parents_string .= $parent;
+    }
+    else {
+      $parents_string .= '[' . $parent . ']';
+    }
+  }
+
+  $selector = 'select[name="' . $parents_string . '[field_link_type]"]';
+
+  // Dependent fields.
+
+  $subform['field_link']['#states'] = [
+    'visible' => [
+      $selector => [
+        ['value' => 'link'],
+      ],
+    ],
+  ];
+
+  $subform['field_browser_files']['#states'] = [
+    'visible' => [
+      $selector => [
+        ['value' => 'file'],
+      ],
+    ],
+  ];
+}

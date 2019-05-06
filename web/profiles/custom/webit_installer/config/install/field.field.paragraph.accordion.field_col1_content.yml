@@ -1,0 +1,69 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_col1_content
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.accordion_item
+  module:
+    - entity_reference_revisions
+id: paragraph.accordion.field_col1_content
+field_name: field_col1_content
+entity_type: paragraph
+bundle: accordion
+label: 'Elementi accordion'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion_item: accordion_item
+    target_bundles_drag_drop:
+      accordion:
+        weight: 14
+        enabled: false
+      accordion_item:
+        enabled: true
+        weight: 15
+      anchor:
+        weight: 15
+        enabled: false
+      box_highlight:
+        weight: 16
+        enabled: false
+      filelist:
+        weight: 17
+        enabled: false
+      grid_list:
+        weight: 18
+        enabled: false
+      hero:
+        weight: 19
+        enabled: false
+      photogallery:
+        weight: 20
+        enabled: false
+      section:
+        weight: 21
+        enabled: false
+      simple_button:
+        weight: 22
+        enabled: false
+      simple_image:
+        weight: 23
+        enabled: false
+      simple_text:
+        weight: 24
+        enabled: false
+      simple_video:
+        weight: 25
+        enabled: false
+      videogallery:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

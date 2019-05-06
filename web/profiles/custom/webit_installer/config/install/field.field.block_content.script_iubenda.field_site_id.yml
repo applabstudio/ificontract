@@ -1,0 +1,18 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - block_content.type.script_iubenda
+    - field.storage.block_content.field_site_id
+id: block_content.script_iubenda.field_site_id
+field_name: field_site_id
+entity_type: block_content
+bundle: script_iubenda
+label: 'Site ID'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

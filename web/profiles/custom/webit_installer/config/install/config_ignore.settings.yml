@@ -1,0 +1,5 @@
+ignored_config_entities:
+  0: system.performance
+  2: google_analytics.settings
+  4: google_tag.settings
+langcode: it

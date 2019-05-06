@@ -1,0 +1,8 @@
+langcode: it
+status: true
+dependencies: {  }
+id: grid_row
+label: 'Riga di contenuti'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

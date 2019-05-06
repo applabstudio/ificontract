@@ -1,0 +1,16 @@
+langcode: it
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_md
+label: 'Hero MD'
+effects:
+  26fb8b20-cd9f-440b-a6ab-403058db5764:
+    uuid: 26fb8b20-cd9f-440b-a6ab-403058db5764
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1024
+      height: 512
+      crop_type: focal_point

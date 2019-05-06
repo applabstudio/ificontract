@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains webit_memcache.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function webit_memcache_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the webit_memcache module.
+    case 'help.page.webit_memcache':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('A Webit memecache module that prevents deadlock caused by the concurrence between memcache and Drupal row manager') . '</p>';
+      return $output;
+
+    default:
+  }
+}

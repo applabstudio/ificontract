@@ -1,0 +1,33 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.grid_list.field_col1_content
+    - field.field.paragraph.grid_list.field_num_grid_cols
+    - paragraphs.paragraphs_type.grid_list
+  module:
+    - entity_reference_revisions
+id: paragraph.grid_list.default
+targetEntityType: paragraph
+bundle: grid_list
+mode: default
+content:
+  field_col1_content:
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_num_grid_cols:
+    weight: 0
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden: {  }

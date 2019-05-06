@@ -1,0 +1,8 @@
+langcode: it
+status: true
+dependencies: {  }
+id: grid_list
+label: 'Elenco in griglia'
+icon_uuid: null
+description: 'Permette di inserire dei componenti in una griglia divisa in colonne di larghezza uguale'
+behavior_plugins: {  }

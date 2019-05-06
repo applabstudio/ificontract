@@ -1,0 +1,8 @@
+langcode: it
+status: true
+dependencies: {  }
+id: simple_text
+label: 'Testo semplice'
+icon_uuid: null
+description: 'Inserisce un contenuto di testo formattabile'
+behavior_plugins: {  }

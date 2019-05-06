@@ -1,0 +1,12 @@
+langcode: it
+status: true
+dependencies: {  }
+id: custom_schedule
+label: 'Custom Schedule'
+enabled: true
+keep: 3
+period: 86400
+cron: null
+source_id: default_db
+destination_id: private_files
+settings_profile_id: null

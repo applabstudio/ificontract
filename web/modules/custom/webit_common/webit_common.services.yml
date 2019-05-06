@@ -1,0 +1,5 @@
+services:
+  webit_common.webform_route_subscriber:
+    class: Drupal\webit_common\Routing\WebformRouteSubscriber
+    tags:
+      - { name: event_subscriber }

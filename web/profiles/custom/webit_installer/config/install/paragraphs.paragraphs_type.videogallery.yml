@@ -1,0 +1,8 @@
+langcode: it
+status: true
+dependencies: {  }
+id: videogallery
+label: Videogallery
+icon_uuid: null
+description: 'Aggiunge una gallery di video caricati su YouTube o Vimeo'
+behavior_plugins: {  }

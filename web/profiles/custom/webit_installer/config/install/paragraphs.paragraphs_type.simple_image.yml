@@ -1,0 +1,8 @@
+langcode: it
+status: true
+dependencies: {  }
+id: simple_image
+label: Immagine
+icon_uuid: null
+description: 'Inserisce un''immagine'
+behavior_plugins: {  }

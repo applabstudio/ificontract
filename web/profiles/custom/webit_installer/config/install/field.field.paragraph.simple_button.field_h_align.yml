@@ -1,0 +1,20 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_h_align
+    - paragraphs.paragraphs_type.simple_button
+  module:
+    - options
+id: paragraph.simple_button.field_h_align
+field_name: field_h_align
+entity_type: paragraph
+bundle: simple_button
+label: Allineamento
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

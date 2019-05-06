@@ -1,0 +1,14 @@
+langcode: it
+status: true
+dependencies: {  }
+name: md
+label: MD
+effects:
+  1a3cf1b2-e460-4458-b0b8-260ac7a80de9:
+    uuid: 1a3cf1b2-e460-4458-b0b8-260ac7a80de9
+    id: image_scale
+    weight: 1
+    data:
+      width: 1024
+      height: null
+      upscale: false

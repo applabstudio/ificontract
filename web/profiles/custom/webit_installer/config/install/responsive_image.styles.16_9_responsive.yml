@@ -1,0 +1,28 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - image.style.16_9_lg
+    - image.style.16_9_md
+    - image.style.16_9_sm
+    - image.style.16_9_xl
+    - image.style.16_9_xs
+  theme:
+    - webit
+id: 16_9_responsive
+label: '16:9 Responsive'
+image_style_mappings:
+  -
+    breakpoint_id: webit.phone
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - 16_9_lg
+        - 16_9_md
+        - 16_9_sm
+        - 16_9_xl
+        - 16_9_xs
+breakpoint_group: webit
+fallback_image_style: 16_9_xs

@@ -1,0 +1,18 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - block_content.type.links_iubenda
+    - field.storage.block_content.field_cookie_policy_id
+id: block_content.links_iubenda.field_cookie_policy_id
+field_name: field_cookie_policy_id
+entity_type: block_content
+bundle: links_iubenda
+label: 'Cookie Policy ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

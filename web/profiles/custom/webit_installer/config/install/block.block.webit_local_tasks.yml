@@ -1,0 +1,30 @@
+langcode: it
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - webit
+id: webit_local_tasks
+theme: webit
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Schede
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+      editor: editor
+      webit: webit
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

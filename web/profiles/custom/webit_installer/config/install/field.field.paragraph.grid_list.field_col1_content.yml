@@ -1,0 +1,55 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_col1_content
+    - paragraphs.paragraphs_type.box_highlight
+    - paragraphs.paragraphs_type.grid_list
+    - paragraphs.paragraphs_type.simple_button
+    - paragraphs.paragraphs_type.simple_image
+  module:
+    - entity_reference_revisions
+id: paragraph.grid_list.field_col1_content
+field_name: field_col1_content
+entity_type: paragraph
+bundle: grid_list
+label: 'Elementi griglia'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      box_highlight: box_highlight
+      simple_button: simple_button
+      simple_image: simple_image
+    target_bundles_drag_drop:
+      anchor:
+        weight: 9
+        enabled: false
+      box_highlight:
+        enabled: true
+        weight: 10
+      grid_list:
+        weight: 11
+        enabled: false
+      hero:
+        weight: 12
+        enabled: false
+      section:
+        weight: 13
+        enabled: false
+      simple_button:
+        enabled: true
+        weight: 14
+      simple_image:
+        enabled: true
+        weight: 15
+      simple_text:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

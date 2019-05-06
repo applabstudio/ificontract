@@ -1,0 +1,10 @@
+langcode: it
+status: true
+dependencies: {  }
+name: Articolo
+type: article
+description: 'Usa gli <em>articoli</em> per contenuti come notizie, comunicati stampa o post di un blog.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

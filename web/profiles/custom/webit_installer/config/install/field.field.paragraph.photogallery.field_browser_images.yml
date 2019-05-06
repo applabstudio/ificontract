@@ -1,0 +1,27 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_browser_images
+    - media.type.image
+    - paragraphs.paragraphs_type.photogallery
+id: paragraph.photogallery.field_browser_images
+field_name: field_browser_images
+entity_type: paragraph
+bundle: photogallery
+label: Immagini
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

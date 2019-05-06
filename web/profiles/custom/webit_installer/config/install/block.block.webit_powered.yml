@@ -1,0 +1,19 @@
+langcode: it
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - webit
+id: webit_powered
+theme: webit
+region: header
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Realizzato con Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }
