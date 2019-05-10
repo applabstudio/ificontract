@@ -1,0 +1,21 @@
+<section class="section section--pad-both">
+  <div class="container">
+    <div class="grid grid--gutters" data-msnry data-gallery>
+      {% for image in images %}
+        {% set mediaEntity = image.entity %}
+
+        {% if mediaEntity.hastranslation(language) %}
+          {% set mediaEntity = mediaEntity.translation(language) %}
+        {% endif %}
+
+        {% set imageFileEntity = mediaEntity.field_media_image.entity %}
+
+        <div class="grid-cell grid-cell--1-1 grid-cell--1-3@sm" data-msnry-item>
+          <a class="carousel__item" href="{{ file_url(imageFileEntity.uri.value) }}" data-gallery-item data-sub-html="{{ mediaEntity.field_media_image.alt }}">
+            {{ drupal_entity('media', mediaEntity.id) }}
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

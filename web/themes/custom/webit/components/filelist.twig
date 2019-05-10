@@ -1,0 +1,10 @@
+<div class="filelist {% if display == 'o' %}filelist--horz{% endif %}">
+  <div class="filelist__title">{{ title }}</div>
+  <ul class="filelist__list">
+    {% for item in list %}
+      <li>
+        {{ item }}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,25 @@
+<section class="section section--pad-both">
+  <div class="carousel">
+    <div class="swiper-container" data-swiper="image-carousel">
+      <div class="swiper-wrapper" data-gallery>
+        {% for image in images %}
+          {% embed "@components/swiper-slide.twig" %}
+            {% set mediaEntity = image.entity %}
+
+            {% if mediaEntity.hastranslation(language) %}
+              {% set mediaEntity = mediaEntity.translation(language) %}
+            {% endif %}
+
+            {% set imageFileEntity = mediaEntity.field_media_image.entity %}
+
+            {% block content %}
+              <a href="{{ file_url(imageFileEntity.uri.value) }}" class="carousel__item" data-gallery-item data-sub-html="{{ mediaEntity.field_media_image.alt }}">
+                <img src="{{ imageFileEntity.uri.value|image_style('carousel_thumb') }}" alt="{{ mediaEntity.field_media_image.alt }}" class="carousel__img">
+              </a>
+            {% endblock %}
+          {% endembed %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

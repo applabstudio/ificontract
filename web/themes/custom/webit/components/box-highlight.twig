@@ -1,16 +1,12 @@
-<div class="focus-text {{ textColor }} {% if hover %}focus-text--teaser{% endif %}" {% if link %}data-allclick{% endif %}>
-    <header class="focus-text__header">
-        {% if icon %}
-        {{ source(base_path ~ directory ~ '/images/svg/' ~ icon ~ '.svg') }}
-        {% endif %}
-        <h3 class="focus-text__title">{{ title }}</h3>
-    </header>
-    <div class="tinytext">
-        {{ text }}
-    </div>
-    {% if link %}
-        <footer class="focus-text__footer">
-            <a href="{{ link[0]['#url'] }}" class="more-link">{{ link[0]['#title'] }}</a>
-        </footer>
-    {% endif %}
+<div class="highlight {% if link %}js-allclick highlight--hover{% endif %}">
+  <div class="highlight__ico">
+    <svg><use xlink:href="/{{ active_theme_path() }}/images/svg/sprite.svg#{{ icon }}"></use></svg>
+  </div>
+  <h3 class="highlight__title">{{ title }}</h3>
+  <div class="highlight__text">{{ text }}</div>
+  {% if link %}
+    <a href="{{ link }}" class="highlight__link">
+      <svg><use xlink:href="/{{ active_theme_path() }}/images/svg/sprite.svg#arrow"></use></svg>
+    </a>
+  {% endif %}
 </div>

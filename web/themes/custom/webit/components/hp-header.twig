@@ -1,0 +1,35 @@
+<section class="section">
+  <div class="container--large">
+    <div class="home-banners">
+      <div class="home-banners__first" style="background-image: url({{ bannersImgUrl[0] }})"></div>
+      <div class="home-banners__second" style="background-image: url({{ bannersImgUrl[1] }})"></div>
+      <div class="container">
+        <div class="home-banner">
+          <div class="home-banner__content">
+            <h1 class="home-banner__title">{{ banners[0].field_label.value|raw }}</h1>
+            <div class="home-banner__btn">
+              <a href="{{ banners[0].field_link.0.url }}" class="button button--brd-w">{{ banners[0].field_link.0.title }}</a>
+            </div>
+          </div>
+        </div>
+        <div class="home-banners__cards" >
+          <div class="grid grid--gutters">
+            {% for box in boxes %}
+              <div class="grid-cell grid-cell--1-1 grid-cell--1-3@sm">
+                {{ box }}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="home-banner home-banner--center">
+          <div class="home-banner__content">
+            <h2 class="home-banner__title">{{ banners[1].field_label.value|nl2br }}</h2>
+            <div class="home-banner__btn">
+              <a href="{{ banners[1].field_link.0.url }}" class="button button--brd-w">{{ banners[1].field_link.0.title }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

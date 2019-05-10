@@ -1,0 +1,13 @@
+<article class="news-card js-allclick">
+  <div class="news-card__cat">{{ cat }}</div>
+  <div class="news-card__img">
+    {{ image }}
+  </div>
+  <div class="news-card__text">
+    <div class="news-card__meta">
+      <time>{{ date }}</time>
+      <svg><use xlink:href="/{{ active_theme_path() }}/images/svg/sprite.svg#arrow"></use></svg>
+    </div>
+    <h3 class="news-card__title"><a href="{{ url }}">{{ title }}</a></h3>
+  </div>
+</article>

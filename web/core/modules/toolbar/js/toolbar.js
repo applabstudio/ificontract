@@ -26,8 +26,12 @@
       }
 
       $(context).find('#toolbar-administration').once('toolbar').each(function () {
+        // Establish the toolbar models and views.
+        var defaultLock = (options.default_orientation == 'vertical') ? true : false;
+        var userLocked = JSON.parse(localStorage.getItem('Drupal.toolbar.trayVerticalLocked'));
         var model = new Drupal.toolbar.ToolbarModel({
-          locked: JSON.parse(localStorage.getItem('Drupal.toolbar.trayVerticalLocked')),
+          // locked: JSON.parse(localStorage.getItem('Drupal.toolbar.trayVerticalLocked')),
+          locked: (userLocked != null) ? userLocked : defaultLock,
           activeTab: document.getElementById(JSON.parse(localStorage.getItem('Drupal.toolbar.activeTabID'))),
           height: $('#toolbar-administration').outerHeight()
         });

@@ -9,7 +9,6 @@ regions:
   header: 'Header'
   content: 'Main content'
   footer: 'Footer'
-  navmenu: 'Nav Menu'
   hidden: 'Hidden'
 libraries:
   - webit/website

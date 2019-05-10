@@ -1,2 +1,4 @@
 access toolbar:
   title: 'Use the toolbar'
+administer toolbar:
+  title: 'Configure toolbar settings'

@@ -4,5 +4,6 @@ description: 'Provides a toolbar that shows the top-level administration menu it
 core: 8.x
 package: Core
 version: VERSION
+configure: toolbar.settings
 dependencies:
   - drupal:breakpoint

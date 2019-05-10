@@ -1,0 +1,16 @@
+<article class="prod-teaser {% if url %}js-allclick{% endif %}">
+  <div class="grid grid--gutters grid--center">
+    <div class="grid-cell grid-cell--1-1 grid-cell--1-2@sm">
+      <div class="prod-teaser__img">
+        <a href="{{ url }}">{{ image }}</a>
+      </div>
+    </div>
+    <div class="grid-cell grid-cell--1-1 grid-cell--1-2@sm">
+      <div class="prod-teaser__title">{{ title }}</div>
+      <div class="tinytext">
+        {{ text }}
+        <a href="{{ url }}">{% trans with {'context': 'Tema'} %} See the product {% endtrans %}</a>
+      </div>
+    </div>
+  </div>
+</article>

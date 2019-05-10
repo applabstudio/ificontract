@@ -112,6 +112,10 @@ class Toolbar extends RenderElement {
       $element['#attached']['drupalSettings']['toolbar']['breakpoints'] = $media_queries;
     }
 
+    // Get the default toolbar orientation
+    $config = \Drupal::config('toolbar.settings');
+    $element['#attached']['drupalSettings']['toolbar']['default_orientation'] = $config->get('toolbar_default_orientation');
+
     $module_handler = static::moduleHandler();
     // Get toolbar items from all modules that implement hook_toolbar().
     $items = $module_handler->invokeAll('toolbar');

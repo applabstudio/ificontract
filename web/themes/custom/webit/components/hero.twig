@@ -1,0 +1,13 @@
+<div class="hero {% if linkUrl %}js-allclick{% endif %}">
+  {{ image }}
+  <div class="hero__text">
+    <div class="container">
+      {% if title %}
+        <div class="hero__title">{{ title }}</div>
+      {% endif %}
+      {% if linkUrl %}
+        <a href="{{ linkUrl }}" class="button button--brd-w">{{ linkText }}</a>
+      {% endif %}
+    </div>
+  </div>
+</div>

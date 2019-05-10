@@ -1,3 +1,11 @@
+toolbar.settings:
+  path: '/admin/config/user-interface/toolbar'
+  defaults:
+    _form: 'Drupal\toolbar\Form\ToolbarSettingsForm'
+    _title: 'Toolbar'
+  requirements:
+    _permission: 'administer toolbar'
+
 toolbar.subtrees:
   path: '/toolbar/subtrees/{hash}'
   defaults:

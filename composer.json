@@ -202,7 +202,9 @@
             "Issue #2123543: Add string context and location filters to the translate interface":
             "https://www.drupal.org/files/issues/2123543-46.patch",
             "Regression: not possible to delete source strings in Drupal 8 interface translation":
-            "https://www.drupal.org/files/issues/source-delete-impossible-2503893-4.patch"
+            "https://www.drupal.org/files/issues/source-delete-impossible-2503893-4.patch",
+            "all":
+            "https://www.drupal.org/files/issues/2018-11-23/core-2395797-29-allow-configure-toolbar-orientation.patch"
         },
         "drupal/coffee": {
             "Issue #2815381: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":

@@ -1,10 +1,20 @@
+{% if type == 'link' and url[0]['#plain_text']|first == '#' %}
+  {% set isAnchor = true %}
+{% else %}
+  {% set isAnchor = false %}
+{% endif %}
+
 {% if type == 'file' or url[0]['#plain_text'] starts with 'http' %}
   {% set target = '_blank' %}
 {% else %}
   {% set target = '_self' %}
 {% endif %}
 <div class="simple-button simple-button--{{ h_align }}">
-  <a href="{{ url }}" class="button button--{{ color }}" target="{{ target }}">
+           
+  <a class="btn-gold" {% if isAnchor %}data-scroll{% endif %} target="{{ target }}">
+    {% if type == 'file' %}
+      <svg><use xlink:href="/{{ active_theme_path() }}/images/svg/sprite.svg#download"></use></svg>
+    {% endif %}
     <span>{{ label }}</span>
   </a>
 </div>

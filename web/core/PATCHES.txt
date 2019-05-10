@@ -33,3 +33,7 @@ Regression: not possible to delete source strings in Drupal 8 interface translat
 Source: https://www.drupal.org/files/issues/source-delete-impossible-2503893-4.patch
 
 
+all
+Source: https://www.drupal.org/files/issues/2018-11-23/core-2395797-29-allow-configure-toolbar-orientation.patch
+
+

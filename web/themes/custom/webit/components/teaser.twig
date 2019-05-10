@@ -1,0 +1,11 @@
+<article class="teaser">
+  <div class="teaser__content">
+    <div class="teaser__meta">
+      <div class="teaser__date">{{ date }}</div>
+    </div>
+    <div class="teaser__title"><a href="{{ url }}">{{ title }}</a></div>
+  </div>
+  <a href="{{ url }}" class="teaser__link">
+    <svg><use xlink:href="/{{ active_theme_path() }}/images/svg/sprite.svg#arrow"></use></svg>
+  </a>
+</article>

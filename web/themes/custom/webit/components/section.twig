@@ -1,37 +1,41 @@
-<section class="section section--pad-both {% if bgColorClass  %}{{ bgColorClass }}{% endif %}">
+<section class="section section--pad-both
+{% if bgColorClass %}section--{{ bgColorClass }}{% endif %}
+{% if bgImg %}section--bg-img{% endif %}"
+{% if bgImg %}style="background-image: url({{ bgImg }})"{% endif %}
+>
+  <div class="{{ containerClass }}">
     {% if sectionTitle %}
-        <header class="section__header">
-            {% if isTitleH1 %}
-                <h1 class="section__title">{{ sectionTitle }}</h1>
-            {% else %}
-                <h2 class="section__title">{{ sectionTitle }}</h2>
-            {% endif %}
-        </header>
+      <header class="section__header">
+        {% if isTitleH1 %}
+          <h1 class="section__title">{{ sectionTitle }}</h1>
+        {% else %}
+          <h2 class="section__title">{{ sectionTitle }}</h2>
+        {% endif %}
+      </header>
     {% endif %}
-    <div class="{{ containerClass }}">
-        <div class="grid grid--gutters">
-            {% if numCol == 1 %}
-                <div class="grid-cell grid-cell--12-12">
-                    {{ col1_content }}
-                </div>
-            {% elseif numCol == 2 %}
-                <div class="grid-cell grid-cell--12-12 grid-cell--{{ colsWidth|split('-')|first }}-12@sm">
-                    {{ col1_content }}
-                </div>
-                <div class="grid-cell grid-cell--12-12 grid-cell--{{ colsWidth|split('-')|last }}-12@sm">
-                    {{ col2_content }}
-                </div>
-            {% elseif numCol == 3 %}
-                <div class="grid-cell grid-cell--12-12 grid-cell--4-12@sm">
-                    {{ col1_content }}
-                </div>
-                <div class="grid-cell grid-cell--12-12 grid-cell--4-12@sm">
-                    {{ col2_content }}
-                </div>
-                <div class="grid-cell grid-cell--12-12 grid-cell--4-12@sm">
-                    {{ col3_content }}
-                </div>
-            {% endif %}
+    <div class="grid {% if not collapseCols %}grid--gutters{% endif %}">
+      {% if numCol == 1 %}
+        <div class="grid-cell grid-cell--1-1">
+          {{ col1_content }}
         </div>
+      {% elseif numCol == 2 %}
+        <div class="grid-cell grid-cell--1-1 grid-cell--{{ colsWidth|split('__')|first }}@sm">
+          {{ col1_content }}
+        </div>
+        <div class="grid-cell grid-cell--1-1 grid-cell--{{ colsWidth|split('__')|last }}@sm">
+          {{ col2_content }}
+        </div>
+      {% elseif numCol == 3 %}
+        <div class="grid-cell grid-cell--12-12 grid-cell--4-12@sm">
+          {{ col1_content }}
+        </div>
+        <div class="grid-cell grid-cell--12-12 grid-cell--4-12@sm">
+          {{ col2_content }}
+        </div>
+        <div class="grid-cell grid-cell--12-12 grid-cell--4-12@sm">
+          {{ col3_content }}
+        </div>
+      {% endif %}
     </div>
+  </div>
 </section>

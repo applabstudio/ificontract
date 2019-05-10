@@ -1,5 +1,7 @@
-<div class="simple-text">
-    <div class="tinytext">
-        {{ text }}
-    </div>
+<div class="simple-text simple-text--{{ h_align }}">
+  <div class="tinytext {% if highlight %}tinytext--highlight{% endif %}">
+    {% block content %}
+      {{ text }}
+    {% endblock %}
+  </div>
 </div>

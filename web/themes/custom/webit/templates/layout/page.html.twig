@@ -19,11 +19,6 @@
  * Site identity:
  * - front_page: The URL of the front page. Use this instead of base_path when
  *   linking to the front page. This includes the language domain or prefix.
- * - logo: The url of the logo image, as defined in theme settings.
- * - site_name: The name of the site. This is empty when displaying the site
- *   name has been disabled in the theme settings.
- * - site_slogan: The slogan of the site. This is empty when displaying the site
- *   slogan has been disabled in theme settings.
  *
  * Page content (in order of occurrence in the default page.html.twig):
  * - messages: Status and error messages. Should be displayed prominently.
@@ -48,35 +43,94 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container">
-
-  <header class="site-header" role="banner">
-    {{ page.header }}
+<div class="page">
+  <header class="site-header">
+    <!-- Navigation -->
+      <div class="nav">
+       <a href="{{ front_page }}">
+        <img src="./{{ active_theme_path() }}/images/logo.svg" alt="{{ drupal_token('site:name') }}" class="nav__logo">
+        <span class="nav__title-contract">Contract</span>
+      </a>
+          <!-- Hamburger Menu Nav -->
+          <div class="site-header__bar">
+          <div class="site-header__bar__buttons">
+            <div class="hamburger js-nav-toggle">
+              <div class="hamburger__icon">
+                <a href="#" data-modal="search-modal">
+                 <span class="hamburger__line"></span>
+                  <span class="hamburger__title">Menu</span>
+                </a>
+              </div>
+            </div> 
+          </div> <!-- End Hamburger -->
+           <!-- Modal Menu -->
+ <div class="modal" id="search-modal">
+  <!-- <div class="modal__logo">
+    <img src="" alt="">
+    <span></span>
+  </div> -->
+  <a href="#" class="modal__close">&times; <label>Chiudi</label></a> 
+  <div class="modal__content modal__content--v-center modal__content--chromeless" style="display:none;" id="containerSearch">
+    <form action="" class="search-form">
+      <input type="text" name="" placeholder="cerca nel sito">
+      <button type="submit">
+       <svg><use xlink:href="/images/svg/sprite.svg#lens"></use></svg>
+      </button>
+    </form>
+   </div>
+   <div class="modal__content modal__content--menu-list-item">
+      <ul class="menu-list-item__ul">
+        <li class="menu-list-item__ul__li"> <a href="ifi-contract.html"><b>Ifi.</b> Contract</a></li>
+        <li><a href="progetti.html">Progetti</a></li>
+        <li><a href="designer.html">Designer e architetti</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="lavora-con-noi.html">Lavora con noi</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <br>
+        <li id="cerca">Cerca</li>
+        <li> <a href="#"></a> Italiano / English</li>
+      </ul>
+    </div>
+    <div class="container-footer-logo">
+        <div class="container">
+          <div class="row">
+            <div class="col-6 d-flex">
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-square"></a></i></li>
+                    <li><a href="#"><i class="fab fa-twitter-square"></a></i></li>
+                    <li><a href="#"><i class="fab fa-instagram"></a></i></li>
+                    <li><a href="#"><i class="fab fa-pinterest-square"></a></i></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></a></i></li>
+                </ul>
+            </div>
+            <div class="col-6 d-flex">
+              <a href="#"><img src="./images/ifi-logo.png" alt="Ifi Contract" title="Ifi Contract" class="logo-small"></a>
+              <span> People-centric innovation </span>
+          </div>
+          </div>
+        </div>
+    </div>
+</div> <!-- End Modal Menu -->
+        </div>
+      </div><!-- End Navigation -->
+    <div class="modal" id="search-modal">
+      <a href="#" class="modal__close">&times;</a>
+      <div class="modal__content modal__content--v-center modal__content--chromeless">
+        {{ drupal_form('Drupal\\search\\Form\\SearchBlockForm') }}
+      </div>
+    </div>
   </header>
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
-
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
-
-  {{ page.help }}
-
-  <main role="main">
+  <main role="main" class="main-content">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
-
-
+    {{ page.content }}
   </main>
 
   {% if page.footer %}
-    <footer role="contentinfo">
+    <footer class="site-footer section section--pad-both">
       {{ page.footer }}
     </footer>
   {% endif %}
 
-</div>{# /.layout-container #}
+</div>

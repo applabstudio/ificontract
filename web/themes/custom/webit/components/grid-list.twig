@@ -1,3 +1,13 @@
-<div class="grid-list grid-list--{{ numCol }}col">
-    {{ contents }}
+<div class="grid grid--gutters">
+  {% for item in contents %}
+    {% if numCol == 2 or numCol == 3 %}
+      <div class="grid-cell grid-cell--1-{{ numCol }}@sm">
+        {{ item }}
+      </div>
+    {% else %}
+      <div class="grid-cell grid-cell--1-3@sm grid-cell--1-{{ numCol }}@md">
+        {{ item }}
+      </div>
+    {% endif %}
+  {% endfor %}
 </div>

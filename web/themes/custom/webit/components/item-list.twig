@@ -1,0 +1,17 @@
+<div class="item-list">
+  {% if title %}
+    <header class="item-list__header">
+      <h3 class="item-list__title">{{ title }}</h3>
+      {% if linkAll %}
+        <a href="{{ linkAll }}" class="link-all">{{ linkAllLabel }} &rsaquo;</a>
+      {% endif %}
+    </header>
+  {% endif %}
+  <div class="item-list__content">
+    {% block listContent %}
+      {% for item in items %}
+        {{ item }}
+      {% endfor %}
+    {% endblock %}
+  </div>
+</div>
